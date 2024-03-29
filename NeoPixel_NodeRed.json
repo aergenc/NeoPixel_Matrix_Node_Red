@@ -1,0 +1,2201 @@
+[
+    {
+        "id": "a91beeed.afcbd",
+        "type": "subflow",
+        "name": "8bit",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "98c2c8b0.0f2368"
+                    },
+                    {
+                        "id": "dd5f1561.68d0b8"
+                    },
+                    {
+                        "id": "f53efce6.acf4f"
+                    },
+                    {
+                        "id": "bebf312d.feda2"
+                    },
+                    {
+                        "id": "703c0c28.47f754"
+                    },
+                    {
+                        "id": "5f505b24.46b284"
+                    },
+                    {
+                        "id": "129e3a7c.d25776"
+                    },
+                    {
+                        "id": "9a4055af.81e3c8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 680,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "1ead6ea2.363b01",
+                        "port": 0
+                    },
+                    {
+                        "id": "946f45f4.7b88b8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "d65a2ebd.31b01",
+                        "port": 0
+                    },
+                    {
+                        "id": "fd4d0562.b16388",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "91ea9976.696398",
+                        "port": 0
+                    },
+                    {
+                        "id": "7f819e26.cce6e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "a1044e9f.3d797",
+                        "port": 0
+                    },
+                    {
+                        "id": "cf304823.9cbf98",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "a3b79e9b.cc32b",
+                        "port": 0
+                    },
+                    {
+                        "id": "2130549e.e799bc",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "7f6b30b.da7a0d",
+                        "port": 0
+                    },
+                    {
+                        "id": "f01948a8.c054e8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 540,
+                "wires": [
+                    {
+                        "id": "c548fc65.89af1",
+                        "port": 0
+                    },
+                    {
+                        "id": "dc1a6fd2.bb689",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 680,
+                "y": 620,
+                "wires": [
+                    {
+                        "id": "87a6253e.61cdf8",
+                        "port": 0
+                    },
+                    {
+                        "id": "5de4dc0d.539154",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "1ead6ea2.363b01",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98c2c8b0.0f2368",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&1)==1)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 60,
+        "wires": [
+            [
+                "946f45f4.7b88b8"
+            ],
+            [
+                "1ead6ea2.363b01"
+            ]
+        ]
+    },
+    {
+        "id": "f53efce6.acf4f",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&2)==2)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "d65a2ebd.31b01"
+            ],
+            [
+                "fd4d0562.b16388"
+            ]
+        ]
+    },
+    {
+        "id": "dd5f1561.68d0b8",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&4)==4)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "91ea9976.696398"
+            ],
+            [
+                "7f819e26.cce6e"
+            ]
+        ]
+    },
+    {
+        "id": "bebf312d.feda2",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&8)==8)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "a1044e9f.3d797"
+            ],
+            [
+                "cf304823.9cbf98"
+            ]
+        ]
+    },
+    {
+        "id": "703c0c28.47f754",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&16)==16)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "2130549e.e799bc"
+            ],
+            [
+                "a3b79e9b.cc32b"
+            ]
+        ]
+    },
+    {
+        "id": "5f505b24.46b284",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&32)==32)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "7f6b30b.da7a0d"
+            ],
+            [
+                "f01948a8.c054e8"
+            ]
+        ]
+    },
+    {
+        "id": "129e3a7c.d25776",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&64)==64)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 540,
+        "wires": [
+            [
+                "c548fc65.89af1"
+            ],
+            [
+                "dc1a6fd2.bb689"
+            ]
+        ]
+    },
+    {
+        "id": "9a4055af.81e3c8",
+        "type": "function",
+        "z": "a91beeed.afcbd",
+        "name": "state",
+        "func": "\nif ((msg.payload&128)==128)     {return [null,msg];}\nelse                        {return [msg,null];}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "87a6253e.61cdf8"
+            ],
+            [
+                "5de4dc0d.539154"
+            ]
+        ]
+    },
+    {
+        "id": "d65a2ebd.31b01",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd4d0562.b16388",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91ea9976.696398",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f819e26.cce6e",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1044e9f.3d797",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf304823.9cbf98",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2130549e.e799bc",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3b79e9b.cc32b",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f6b30b.da7a0d",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f01948a8.c054e8",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c548fc65.89af1",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc1a6fd2.bb689",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87a6253e.61cdf8",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5de4dc0d.539154",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "946f45f4.7b88b8",
+        "type": "change",
+        "z": "a91beeed.afcbd",
+        "name": "Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "colour",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2a6bb4f5f498b0f",
+        "type": "tab",
+        "label": "Defne",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c1ace41339f2b947",
+        "type": "subflow:a91beeed.afcbd",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "x": 470,
+        "y": 210,
+        "wires": [
+            [
+                "43c6822f2fd8a56c"
+            ],
+            [
+                "bb2338da61eabdde"
+            ],
+            [
+                "473f111c667845ea"
+            ],
+            [
+                "0e5cbd9b82368974"
+            ],
+            [
+                "cbd23bfc821f2243"
+            ],
+            [
+                "1c5b188f63632124"
+            ],
+            [
+                "55b4faa6d788fe1d"
+            ],
+            [
+                "a49e31cc91980298"
+            ]
+        ]
+    },
+    {
+        "id": "a2010c0845f1c372",
+        "type": "mqtt in",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "topic": "defnedurum",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "fe2bfe86a12e250b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "55d536e0d61cf6ee",
+                "509828f52841e545"
+            ]
+        ]
+    },
+    {
+        "id": "7ca7e75d56c93452",
+        "type": "mqtt out",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "topic": "defnekomut",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe2bfe86a12e250b",
+        "x": 1230,
+        "y": 250,
+        "wires": []
+    },
+    {
+        "id": "509828f52841e545",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 30,
+        "wires": []
+    },
+    {
+        "id": "55d536e0d61cf6ee",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "func": "var msg0 = { payload:0 };\nvar msg1 = { payload:0 };\nvar msg2 = { payload:0 };\nvar msg3 = { payload:0 };\nvar msg4 = { payload:0 };\nvar msg5 = { payload:0 };\nvar msg6 = { payload:0 };\nvar msg7 = { payload:0 };\nvar msg8 = { payload:0 };\nvar msg9 = { payload:0 };\nvar msg10 = { payload:0 };\nvar msg11 = { payload:0 };\n\nmsg0.payload=msg.payload[0];\nmsg1.payload=msg.payload[1];\nmsg2.payload=msg.payload[2];\nmsg3.payload=msg.payload[3];\nmsg4.payload=msg.payload[4];\nmsg5.payload=msg.payload[5];\nmsg6.payload=msg.payload[6];\nmsg7.payload=msg.payload[7];\nmsg8.payload=msg.payload[8];\nmsg9.payload=msg.payload[9];\nmsg10.payload=msg.payload[10];\nmsg11.payload=msg.payload[11];\n\nreturn [msg0,msg1,msg2,msg3,msg4,msg5,msg6,msg7,msg8,msg9,msg10,msg11];",
+        "outputs": 12,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 250,
+        "wires": [
+            [
+                "c1ace41339f2b947",
+                "509828f52841e545"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "08896abaff75c04d",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "function 1",
+        "func": "global.set(\"defnekomut\",msg.payload);\nvar msg0={payload:[]};\nvar matris = { payload: [193] };\nmsg0.payload[0]=msg.payload;\nif (global.get(\"tum\"))\n    {for (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = global.get(\"kirmizi\");\n                                    matris.payload[3 * i + 2] = global.get(\"yesil\"); \n                                    matris.payload[i * 3 + 3] = global.get(\"mavi\"); }}\nif (global.get(\"harf\")) \n    {for(let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = 0; matris.payload[3 * i + 2] = 0; matris.payload[i * 3 + 3] = 0; }\n    for (let k = 0; k < 8; k++) { for (let l = 0; l < 8; l++){ \n      if(global.get(\"harfmat\").payload[k][l]) { matris.payload[3 * (8 * k + l) + 1] = global.get(\"kirmizi\"); \n                                                matris.payload[3 * (8 * k + l) + 2] = global.get(\"yesil\"); \n                                                matris.payload[3 * (8 * k + l) + 3] =  global.get(\"mavi\");}\n    }}}\nif (global.get(\"kare\")) {\n    for (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = 0; matris.payload[3 * i + 2] = 0; matris.payload[i * 3 + 3] = 0; }\n    for (let k = 0; k < 8; k++) {\n        for (let l = 0; l < 8; l++) {\n            //if (global.get(\"sekilmat\").payload[k][l]) \n            {matris.payload[3 * (8 * k + l) + 1] = global.get(\"kirmizimat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 2] = global.get(\"yesilmat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 3] = global.get(\"mavimat\").payload[k][l]; }\n    }}}\nif (global.get(\"ucgen\")) {\n    for (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = 0; matris.payload[3 * i + 2] = 0; matris.payload[i * 3 + 3] = 0; }\n    for (let k = 0; k < 8; k++) {\n        for (let l = 0; l < 8; l++) {\n            //if (global.get(\"sekilmat\").payload[k][l]) \n            {matris.payload[3 * (8 * k + l) + 1] = global.get(\"kirmizimat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 2] = global.get(\"yesilmat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 3] = global.get(\"mavimat\").payload[k][l]; }\n    }}}\nif (global.get(\"daire\")) {\n    for (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = 0; matris.payload[3 * i + 2] = 0; matris.payload[i * 3 + 3] = 0; }\n    for (let k = 0; k < 8; k++) {\n        for (let l = 0; l < 8; l++) {\n            //if (global.get(\"sekilmat\").payload[k][l]) \n            {matris.payload[3 * (8 * k + l) + 1] = global.get(\"kirmizimat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 2] = global.get(\"yesilmat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 3] = global.get(\"mavimat\").payload[k][l]; }\n    }}}\nif (global.get(\"gulens\")) {\n    for (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = 0; matris.payload[3 * i + 2] = 0; matris.payload[i * 3 + 3] = 0; }\n    for (let k = 0; k < 8; k++) {\n        for (let l = 0; l < 8; l++) {\n            //if (global.get(\"sekilmat\").payload[k][l]) \n            {matris.payload[3 * (8 * k + l) + 1] = global.get(\"kirmizimat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 2] = global.get(\"yesilmat\").payload[k][l];\n             matris.payload[3 * (8 * k + l) + 3] = global.get(\"mavimat\").payload[k][l]; }\n    }}}\nif (!(global.get(\"fonk\"))){ \n    { for (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = 0; matris.payload[3 * i + 2] = 0; matris.payload[i * 3 + 3] =0; }\n    matris.payload[(3 * (8 * (global.get(\"x\")-1) + global.get(\"y\")-1)) + 1] = global.get(\"kirmizi\"); \n    matris.payload[(3 * (8 * (global.get(\"x\")-1) + global.get(\"y\")-1)) + 2] = global.get(\"yesil\"); \n    matris.payload[(3 *(8*(global.get(\"x\")-1) + global.get(\"y\")-1)) + 3] = global.get(\"mavi\");}}\nglobal.set(\"matris\", matris);\nfor (let i = 1; i < 193; i++) { msg0.payload[i] = global.get(\"matris\").payload[i]; }\nmsg0.payload[193]=global.get(\"parlaklik\");\nfor (let i = 194; i < 200; i++) { msg0.payload[i] = 0; }\nreturn msg0;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar matris={payload:[193]};\n\nfor (let i = 0; i < 64; i++) { matris.payload[3 * i + 1] = global.get(\"kirmizi\"); matris.payload[3 * i + 2] = global.get(\"yesil\"); matris.payload[i * 3 + 3] = global.get(\"mavi\");}\nglobal.set(\"matris\",matris);",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 370,
+        "wires": [
+            [
+                "7ca7e75d56c93452",
+                "82531670aa86bfc3"
+            ]
+        ]
+    },
+    {
+        "id": "251f7b5abcd54c65",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 750,
+        "wires": []
+    },
+    {
+        "id": "3e392c94699037bb",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 610,
+        "y": 90,
+        "wires": [
+            [
+                "41e860abd062c27f",
+                "bd231eccb44c965c"
+            ]
+        ]
+    },
+    {
+        "id": "6a094068c0c2128b",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "parlaklik",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 1130,
+        "y": 330,
+        "wires": [
+            [
+                "ee77f77987cd5204"
+            ]
+        ]
+    },
+    {
+        "id": "3871d5c5d1c16433",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "kirmizi",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 1140,
+        "y": 370,
+        "wires": [
+            [
+                "ee77f77987cd5204"
+            ]
+        ]
+    },
+    {
+        "id": "23486623a66a08d5",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var zero={payload:0};\n\nglobal.set(msg.topic, msg.payload);\n\nmsg.payload={\"r\":global.get(\"kirmizi\"), \"g\":global.get(\"yesil\"), \"b\":global.get(\"mavi\"), \"a\":global.get(\"parlaklik\")/100};\nreturn [zero ,msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 570,
+        "wires": [
+            [
+                "08896abaff75c04d",
+                "8992351db62e8eab",
+                "8b06b253fc1580a7"
+            ],
+            [
+                "7bd96b7ac2c5c564",
+                "8b06b253fc1580a7"
+            ]
+        ]
+    },
+    {
+        "id": "e8767f7d68595ab4",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "yesil",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 1140,
+        "y": 410,
+        "wires": [
+            [
+                "ee77f77987cd5204"
+            ]
+        ]
+    },
+    {
+        "id": "b3643a3710f820cb",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "mavi",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 1140,
+        "y": 450,
+        "wires": [
+            [
+                "ee77f77987cd5204"
+            ]
+        ]
+    },
+    {
+        "id": "ad321c07230e5404",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 670,
+        "wires": []
+    },
+    {
+        "id": "ee77f77987cd5204",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "global.set(msg.topic,msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 370,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c11fa24a12fab67",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "renksecimi",
+        "func": "var kirmizi={payload:0};\nvar yesil = { payload: 0 };\nvar mavi = { payload: 0 };\nvar parlaklik = { payload: 0 };\nkirmizi.payload=msg.payload.r;\nyesil.payload = msg.payload.g;\nmavi.payload = msg.payload.b;\nparlaklik.payload=global.get(\"parlaklik\");\n\nreturn [kirmizi, yesil, mavi,parlaklik];",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 510,
+        "wires": [
+            [
+                "d61be1bcadfb3c9b"
+            ],
+            [
+                "2c59e063a891c497"
+            ],
+            [
+                "500e88dd83dcc702"
+            ],
+            [
+                "ddd9d1a78d7d3290"
+            ]
+        ]
+    },
+    {
+        "id": "88a4ee622777ed65",
+        "type": "mqtt in",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "topic": "defneokul",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "fe2bfe86a12e250b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 70,
+        "wires": [
+            [
+                "509828f52841e545"
+            ]
+        ]
+    },
+    {
+        "id": "7d13363062843d9e",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var buton={payload:false, colour:\"green\"};\nbuton.payload=global.get(msg.topic)\nbuton.payload=!buton.payload;\nglobal.set(msg.topic,buton.payload);\nif (buton.payload) { buton.colour = \"orange\"; global.set(\"fonk\", true); } else global.set(\"fonk\", false);\nreturn buton;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 530,
+        "wires": [
+            [
+                "13430915452fd305"
+            ]
+        ]
+    },
+    {
+        "id": "88947d815fd63b2c",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "x",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1130,
+        "y": 490,
+        "wires": [
+            [
+                "ee77f77987cd5204"
+            ]
+        ]
+    },
+    {
+        "id": "9b367030dfdc6ec4",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "y",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1130,
+        "y": 530,
+        "wires": [
+            [
+                "ee77f77987cd5204"
+            ]
+        ]
+    },
+    {
+        "id": "21a03ac2f111c658",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "Harfler",
+        "func": "var zero={payload:0};\nvar harf={payload:[]};\nvar harfint = { payload: [] };\nlet harfmat={payload:[[],[],[],[],[],[],[],[]]}; \nvar secim={payload:''};\nsecim.payload=msg.payload;\nharf.payload=global.get(\"harfler\").payload[secim.payload];\nfor (let i=0; i<8; i++) {harfint.payload[i]=parseInt(harf.payload[i],2);}\n\n for (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++){harfmat.payload[i][j]=Boolean(harfint.payload[i]&(1<<(7-j))); } }\nglobal.set(\"harfmat\",harfmat);\nreturn [zero, harf]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar harfler = { payload: [] };\nharfler.payload =\n{   \" \": ['00000000', '00000000', '00000000', '00000000', '00000000', '00000000', '00000000', '00000000'],\n    \"A\": ['00110000', '01111000', '11001100', '11001100', '11111100', '11001100', '11001100', '00000000'],\n    \"B\": ['11111100', '01100110', '01100110', '01111100', '01100110', '01100110', '11111100', '00000000'],\n    \"C\": ['00111100', '01100110', '11000000', '11000000', '11000000', '01100110', '00111100', '00000000'],\n    \"D\": ['11111000', '01101100', '01100110', '01100110', '01100110', '01101100', '11111000', '00000000'],\n    \"E\": ['11111110', '01100010', '01101000', '01111000', '01101000', '01100010', '11111110', '00000000'],\n    \"F\": ['11111110', '01100010', '01101000', '01111000', '01101000', '01100000', '11110000', '00000000'],\n    \"G\": ['00111100', '01100110', '11000000', '11000000', '11001110', '01100110', '00111110', '00000000'],\n    \"H\": ['11001100', '11001100', '11001100', '11111100', '11001100', '11001100', '11001100', '00000000'],\n    \"I\": ['01111000', '00110000', '00110000', '00110000', '00110000', '00110000', '01111000', '00000000'],\n    \"J\": ['00011110', '00001100', '00001100', '00001100', '11001100', '11001100', '01111000', '00000000'],\n    \"K\": ['11110110', '01100110', '01101100', '01111000', '01101100', '01100110', '11110110', '00000000'],\n    \"L\": ['11110000', '01100000', '01100000', '01100000', '01100010', '01100110', '11111110', '00000000'],\n    \"M\": ['11000110', '11101110', '11111110', '11111110', '11010110', '11000110', '11000110', '00000000'],\n    \"N\": ['11000110', '11100110', '11110110', '11011110', '11001110', '11000110', '11000110', '00000000'],\n    \"O\": ['00111000', '01101100', '11000110', '11000110', '11000110', '01101100', '00111000', '00000000'],\n    \"P\": ['11111100', '01100110', '01100110', '01111100', '01100000', '01100000', '11110000', '00000000'],\n    \"Q\": ['01111000', '11001100', '11001100', '11001100', '11011100', '01111000', '00011100', '00000000'],\n    \"R\": ['11111100', '01100110', '01100110', '01111100', '01101100', '01100110', '11110110', '00000000'],\n    \"S\": ['01111000', '11001100', '11100000', '01110000', '00011100', '11001100', '01111000', '00000000'],\n    \"T\": ['11111100', '10110100', '00110000', '00110000', '00110000', '00110000', '01111000', '00000000'],\n    \"U\": ['11001100', '11001100', '11001100', '11001100', '11001100', '11001100', '11111100', '00000000'],\n    \"V\": ['11001100', '11001100', '11001100', '11001100', '11001100', '01111000', '00110000', '00000000'],\n    \"W\": ['11000110', '11000110', '11000110', '11010110', '11111110', '11101110', '11000110', '00000000'],\n    \"X\": ['11000110', '11000110', '01101100', '00111000', '00111000', '01101100', '11000110', '00000000'],\n    \"Y\": ['11001100', '11001100', '11001100', '01111000', '00110000', '00110000', '01111000', '00000000'],\n    \"Z\": ['11111110', '11000110', '10001100', '00011000', '00110010', '01100110', '11111110', '00000000'],\n    \"*\": ['01100110', '11111111', '11111111', '11111111', '01111110', '01111110', '00111100', '00011000'],\n    \"+\": ['01100110', '10011001', '10000001', '10000001', '01000010', '01000010', '00100100', '00011000'],\n    \"k\": ['11111111', '10000001', '10000001', '10000001', '10000001', '10000001', '10000001', '11111111'],\n    };\nglobal.set(\"harfler\", harfler);\n",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 30,
+        "wires": [
+            [
+                "60fa11f9b0fd2931",
+                "08896abaff75c04d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "60fa11f9b0fd2931",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 30,
+        "wires": []
+    },
+    {
+        "id": "e7d83318015d8d1d",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "global.set(msg.topic,msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 470,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41e860abd062c27f",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "yazisiralayici",
+        "func": "var msg0={payload:\"\"};\nvar sayac={payload:0};\nvar yazi={payload:\" \"};\nvar uzunluk={payload:0};\nyazi.payload = global.get(\"yazi\");\nif((yazi.payload == undefined) || yazi.payload==\"\") {yazi.payload=\" \";}\nuzunluk.payload = yazi.payload.length;\nsayac.payload = global.get(\"sayac\");\nif (sayac.payload<(uzunluk.payload-1)) {sayac.payload=sayac.payload+1;} else sayac.payload=0; \nglobal.set(\"sayac\",sayac.payload);\nmsg0.payload=yazi.payload[sayac.payload];\nreturn [msg0,yazi,uzunluk];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set(\"sayac\",0);",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 30,
+        "wires": [
+            [
+                "21a03ac2f111c658",
+                "60fa11f9b0fd2931"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "36734f6823216062",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var buton={payload:false, colour:\"green\"};\nbuton.payload=global.get(msg.topic)\nbuton.payload=!buton.payload\nglobal.set(msg.topic,buton.payload);\nif (buton.payload) { buton.colour = \"orange\"; global.set(\"fonk\", true); } else global.set(\"fonk\", false);\nreturn buton;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 590,
+        "wires": [
+            [
+                "087ad059c1a8912f"
+            ]
+        ]
+    },
+    {
+        "id": "d01bc5fb5bc063ca",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var buton={payload:false, colour:\"green\"};\nbuton.payload=global.get(msg.topic)\nbuton.payload=!buton.payload\nglobal.set(msg.topic,buton.payload);\nif (buton.payload) { buton.colour = \"orange\"; global.set(\"fonk\", true); } else global.set(\"fonk\", false);\nreturn buton;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 650,
+        "wires": [
+            [
+                "00f727a4f7d54bc7"
+            ]
+        ]
+    },
+    {
+        "id": "a0537a5c34546a87",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var buton={payload:false, colour:\"green\"};\nbuton.payload=global.get(msg.topic)\nbuton.payload=!buton.payload\nglobal.set(msg.topic,buton.payload);\nif (buton.payload) { buton.colour = \"orange\"; global.set(\"fonk\", true); } else global.set(\"fonk\", false);\nreturn buton;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 710,
+        "wires": [
+            [
+                "1ceb4bd78d8bf7c0"
+            ]
+        ]
+    },
+    {
+        "id": "4ac4ef0dabe54f39",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var buton={payload:false, colour:\"green\"};\nbuton.payload=global.get(msg.topic)\nbuton.payload=!buton.payload\nglobal.set(msg.topic,buton.payload);\nif (buton.payload) { buton.colour = \"orange\"; global.set(\"fonk\", true); } else global.set(\"fonk\", false);\nreturn buton;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 770,
+        "wires": [
+            [
+                "03bcb0894b91fa53"
+            ]
+        ]
+    },
+    {
+        "id": "bd231eccb44c965c",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "Sekiller",
+        "func": "var zero = { payload: 0 };\nvar sekil={payload:[]};\nvar sekilint = { payload: [] };\nlet sekilmat={payload:[[],[],[],[],[],[],[],[]]}; \nvar secim={payload:''};\nvar sayac = { payload: 0 };\nlet kirmizimat = { payload:[ [],[],[],[],[],[],[],[]] };\nlet yesilmat = { payload: [ [],[],[],[],[],[],[],[]] };\nlet mavimat = { payload: [ [],[],[],[],[],[],[],[]] };\nkirmizimat=global.get(\"kirmizimat\");\nyesilmat=global.get(\"yesilmat\");\nmavimat=global.get(\"mavimat\");\n\nsayac.payload = global.get(\"sayack\");\nif (sayac.payload < 4) { sayac.payload = sayac.payload + 1; } else sayac.payload = 0;\nglobal.set(\"sayack\", sayac.payload);\n\nif (global.get(\"kare\")) { sekil.payload = global.get(\"kareler\").payload[sayac.payload]; }\nif (global.get(\"ucgen\")) { sekil.payload = global.get(\"ucgenler\").payload[sayac.payload]; }\nif (global.get(\"daire\")) { sekil.payload = global.get(\"daireler\").payload[sayac.payload]; }\nif (global.get(\"gulens\")) { sekil.payload = global.get(\"gulen\").payload[sayac.payload]; }\nfor (let i = 0; i < 8; i++) { sekilint.payload[i] = parseInt(sekil.payload[i],2);}\nfor (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { sekilmat.payload[i][j] = Boolean(sekilint.payload[i]&(1<<(7-j))); } }\nglobal.set(\"sekilmat\",sekilmat);\n\nif (sayac.payload == 0) { for (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { \n    if (sekilmat.payload[i][j]) \n        { kirmizimat.payload[i][j] = 0;  yesilmat.payload[i][j] =0;  mavimat.payload[i][j] = 0; } }}}  \nif (sayac.payload == 1) { for (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { \n    if (sekilmat.payload[i][j]) \n        { kirmizimat.payload[i][j] = parseInt(global.get(\"kirmizi\"));  yesilmat.payload[i][j] = parseInt(global.get(\"yesil\")/4);  mavimat.payload[i][j] = parseInt(global.get(\"mavi\")/5); } }}}  \n    \nif (sayac.payload == 2) {  for (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { \n    if (sekilmat.payload[i][j]) \n        { kirmizimat.payload[i][j] = parseInt(global.get(\"kirmizi\")/2);  yesilmat.payload[i][j] = parseInt(global.get(\"yesil\"));  mavimat.payload[i][j] =parseInt( global.get(\"mavi\")); } }}}\n        \nif (sayac.payload == 3) {  for (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { \n    if (sekilmat.payload[i][j]) \n        { kirmizimat.payload[i][j] = parseInt(global.get(\"kirmizi\")/3);  yesilmat.payload[i][j] = parseInt(global.get(\"yesil\"));  mavimat.payload[i][j] = parseInt(global.get(\"mavi\")/3); } }}}\n        \nif (sayac.payload == 4) {  for (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { \n    if (sekilmat.payload[i][j]) \n        { kirmizimat.payload[i][j] = parseInt(global.get(\"kirmizi\")/4);  yesilmat.payload[i][j] = parseInt(global.get(\"yesil\")/3);  mavimat.payload[i][j] = parseInt(global.get(\"mavi\")); } }}}\nglobal.set(\"kirmizimat\", kirmizimat);\nglobal.set(\"yesilmat\", yesilmat);\nglobal.set(\"mavimat\", mavimat);\nreturn [zero, sekil]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar kareler = { payload: [] };\nvar ucgenler = { payload: [] };\nvar daireler = { payload: [] };\nvar gulen=   { payload: [] };\nkareler.payload =\n{   \"0\": ['11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111'],\n    \"1\": ['00000000', '00000000', '00000000', '00011000', '00011000', '00000000', '00000000', '00000000'],\n    \"2\": ['00000000', '00000000', '00111100', '00100100', '00100100', '00111100', '00000000', '00000000'],\n    \"3\": ['00000000', '01111110', '01000010', '01000010', '01000010', '01000010', '01111110', '00000000'],\n    \"4\": ['11111111', '10000001', '10000001', '10000001', '10000001', '10000001', '10000001', '11111111']\n    };\nucgenler.payload =\n{\n    \"0\": ['11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111'],\n    \"1\": ['00000000', '00000000', '00000000', '00000000', '00000000', '00000000', '00001000', '00011000'],\n    \"2\": ['00000000', '00000000', '00000000', '00000000', '00000100', '00001100', '00010100', '00100100'],\n    \"3\": ['00000000', '00000000', '00000010', '00000110', '00001010', '00010010', '00100010', '01000010'],\n    \"4\": ['00000001', '00000011', '00000101', '00001001', '00010001', '00100001', '01000001', '10000001']\n};\ndaireler.payload =\n{\n    \"0\": ['11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111'],\n    \"1\": ['00000000', '00000000', '00000000', '00011000', '00011000', '00000000', '00000000', '00000000'],\n    \"2\": ['00000000', '00000000', '00011000', '00100100', '00100100', '00011000', '00000000', '00000000'],\n    \"3\": ['00000000', '00011000', '00100100', '01000010', '01000010', '00100100', '00011000', '00000000'],\n    \"4\": ['00011000', '01100110', '01000010', '10000001', '10000001', '01000010', '01100110', '00011000']\n};\ngulen.payload =\n{\n    \"0\": ['11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111', '11111111'],\n    \"1\": ['00111100', '01000010', '10000001', '10000001', '10000001', '10000001', '01000010', '00111100'],\n    \"2\": ['00000000', '00000000', '00100100', '00000000', '00100100', '00011000', '00000000', '00000000'],\n    \"3\": ['00111100', '01000010', '10000001', '10000001', '10000001', '10000001', '01000010', '00111100'],\n    \"4\": ['00000000', '00000000', '00100100', '00000000', '00100100', '00011000', '00000000', '00000000'],\n};\nglobal.set(\"kareler\", kareler);\nglobal.set(\"ucgenler\", ucgenler);\nglobal.set(\"daireler\", daireler);\nglobal.set(\"gulen\", gulen);",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 110,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ],
+            [
+                "de1adf6fa5eb3b1f"
+            ]
+        ]
+    },
+    {
+        "id": "de1adf6fa5eb3b1f",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 110,
+        "wires": []
+    },
+    {
+        "id": "82531670aa86bfc3",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 230,
+        "wires": []
+    },
+    {
+        "id": "8992351db62e8eab",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "colormat",
+        "func": "var zeron={payload:0};\nlet kirmizimat = { payload:[ [],[],[],[],[],[],[],[]] };\nlet yesilmat = { payload: [ [],[],[],[],[],[],[],[]] };\nlet mavimat = { payload: [ [],[],[],[],[],[],[],[]] };\n\nfor (let i = 0; i <8; i++) { for (let j = 0; j < 8; j++) \n{ kirmizimat.payload[i][j] = global.get(\"kirmizi\"); \n  yesilmat.payload[i][j] = global.get(\"yesil\");\n  mavimat.payload[i][j] = global.get(\"mavi\"); } }\nglobal.set(\"kirmizimat\", kirmizimat);\nglobal.set(\"yesilmat\", yesilmat);\nglobal.set(\"mavimat\", mavimat);\n\nreturn [msg ,kirmizimat]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started\nlet kirmizimat = { payload:[ [],[],[],[],[],[],[],[]]};\nlet yesilmat = { payload: [ [],[],[],[],[],[],[],[]] };\nlet mavimat = { payload:[ [],[],[],[],[],[],[],[]] };\nfor (let i = 0; i < 8; i++) { for (let j = 0; j < 8; j++) { kirmizimat.payload[i][j] = 0; yesilmat.payload[i][j] = 0; mavimat.payload[i][j] = 0;}}\nglobal.set(\"kirmizimat\", kirmizimat);\nglobal.set(\"yesilmat\", yesilmat);\nglobal.set(\"mavimat\", mavimat);\n",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 690,
+        "wires": [
+            [
+                "251f7b5abcd54c65"
+            ],
+            [
+                "251f7b5abcd54c65"
+            ]
+        ]
+    },
+    {
+        "id": "7488349cbd7a3b6c",
+        "type": "inject",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 320,
+        "y": 730,
+        "wires": [
+            [
+                "8992351db62e8eab"
+            ]
+        ]
+    },
+    {
+        "id": "8b06b253fc1580a7",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a0dc41855430fd6e",
+        "type": "function",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "globalset",
+        "func": "var buton={payload:false, colour:\"green\"};\nbuton.payload=global.get(msg.topic)\nbuton.payload=!buton.payload\nglobal.set(msg.topic,buton.payload);\nif (buton.payload) { buton.colour = \"orange\"; global.set(\"fonk\", true); } else global.set(\"fonk\", false);\nreturn buton;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 710,
+        "wires": [
+            [
+                "d1753e732a29b651"
+            ]
+        ]
+    },
+    {
+        "id": "43c6822f2fd8a56c",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Basla",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 170,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "bb2338da61eabdde",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Flasor",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "2",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 210,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "473f111c667845ea",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "kayma",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "4",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 250,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "0e5cbd9b82368974",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "karasimsek",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "8",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 650,
+        "y": 290,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "cbd23bfc821f2243",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "kirmizi",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "16",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 330,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "1c5b188f63632124",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "yesil",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "32",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 370,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "55b4faa6d788fe1d",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "mavi",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "64",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 410,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "a49e31cc91980298",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "beyaz",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "128",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 450,
+        "wires": [
+            [
+                "08896abaff75c04d"
+            ]
+        ]
+    },
+    {
+        "id": "13430915452fd305",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Tum",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "tum",
+        "topicType": "str",
+        "x": 810,
+        "y": 530,
+        "wires": [
+            [
+                "7d13363062843d9e"
+            ]
+        ]
+    },
+    {
+        "id": "087ad059c1a8912f",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Harf",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "harf",
+        "topicType": "str",
+        "x": 810,
+        "y": 590,
+        "wires": [
+            [
+                "36734f6823216062"
+            ]
+        ]
+    },
+    {
+        "id": "00f727a4f7d54bc7",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Kare",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "kare",
+        "topicType": "str",
+        "x": 810,
+        "y": 650,
+        "wires": [
+            [
+                "d01bc5fb5bc063ca"
+            ]
+        ]
+    },
+    {
+        "id": "1ceb4bd78d8bf7c0",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Daire",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "daire",
+        "topicType": "str",
+        "x": 810,
+        "y": 710,
+        "wires": [
+            [
+                "a0537a5c34546a87"
+            ]
+        ]
+    },
+    {
+        "id": "03bcb0894b91fa53",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Ucgen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "ucgen",
+        "topicType": "str",
+        "x": 810,
+        "y": 770,
+        "wires": [
+            [
+                "4ac4ef0dabe54f39"
+            ]
+        ]
+    },
+    {
+        "id": "d1753e732a29b651",
+        "type": "ui_button",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "group": "ebf023d729e56112",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Gulen",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{colour}}",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "gulens",
+        "topicType": "str",
+        "x": 1120,
+        "y": 710,
+        "wires": [
+            [
+                "a0dc41855430fd6e"
+            ]
+        ]
+    },
+    {
+        "id": "ddd9d1a78d7d3290",
+        "type": "ui_slider",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "parlaklik",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "parlaklik",
+        "topicType": "str",
+        "min": "1",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 440,
+        "y": 510,
+        "wires": [
+            [
+                "23486623a66a08d5"
+            ]
+        ]
+    },
+    {
+        "id": "d61be1bcadfb3c9b",
+        "type": "ui_slider",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "Kirmizi",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "kirmizi",
+        "topicType": "str",
+        "min": "0",
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 390,
+        "wires": [
+            [
+                "23486623a66a08d5"
+            ]
+        ]
+    },
+    {
+        "id": "2c59e063a891c497",
+        "type": "ui_slider",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "Yesil",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "yesil",
+        "topicType": "str",
+        "min": "0",
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 430,
+        "wires": [
+            [
+                "23486623a66a08d5"
+            ]
+        ]
+    },
+    {
+        "id": "500e88dd83dcc702",
+        "type": "ui_slider",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "Mavi",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "mavi",
+        "topicType": "str",
+        "min": "0",
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 470,
+        "wires": [
+            [
+                "23486623a66a08d5"
+            ]
+        ]
+    },
+    {
+        "id": "5558375b183ff71d",
+        "type": "ui_slider",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "X",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "x",
+        "topicType": "str",
+        "min": "1",
+        "max": "8",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 550,
+        "wires": [
+            [
+                "23486623a66a08d5"
+            ]
+        ]
+    },
+    {
+        "id": "2a454521ab853200",
+        "type": "ui_slider",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "Y",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "y",
+        "topicType": "str",
+        "min": "1",
+        "max": "8",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 590,
+        "wires": [
+            [
+                "23486623a66a08d5"
+            ]
+        ]
+    },
+    {
+        "id": "6f8cbb02bede340d",
+        "type": "ui_text_input",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "Yazi:",
+        "tooltip": "",
+        "group": "ebf023d729e56112",
+        "order": 15,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "yazi",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 810,
+        "y": 470,
+        "wires": [
+            [
+                "e7d83318015d8d1d"
+            ]
+        ]
+    },
+    {
+        "id": "7bd96b7ac2c5c564",
+        "type": "ui_colour_picker",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "label": "",
+        "group": "db4ffd2e2b55c314",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": true,
+        "showValue": true,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 12,
+        "width": "4",
+        "height": "4",
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 130,
+        "y": 670,
+        "wires": [
+            [
+                "ad321c07230e5404",
+                "1c11fa24a12fab67"
+            ]
+        ]
+    },
+    {
+        "id": "ad2bca15e9bad881",
+        "type": "mqtt in",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "",
+        "topic": "defnekomut",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "fe2bfe86a12e250b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "bbff547ad6efa78d"
+            ]
+        ]
+    },
+    {
+        "id": "bbff547ad6efa78d",
+        "type": "debug",
+        "z": "c2a6bb4f5f498b0f",
+        "name": "debug 21",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 220,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "fe2bfe86a12e250b",
+        "type": "mqtt-broker",
+        "name": "orangepiMQTT",
+        "broker": "172.24.1.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ebf023d729e56112",
+        "type": "ui_group",
+        "name": "Command",
+        "tab": "45ad9b0cf71364db",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "db4ffd2e2b55c314",
+        "type": "ui_group",
+        "name": "Renk",
+        "tab": "45ad9b0cf71364db",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "45ad9b0cf71364db",
+        "type": "ui_tab",
+        "name": "DEFNE",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
